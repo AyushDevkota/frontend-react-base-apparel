@@ -49,6 +49,7 @@ section {
 	.content {
 		width: 60%;
 		text-align: left;
+		padding: 2em 0;
 	}
 
 	.title {

@@ -4,10 +4,10 @@ import classes from "./Image.module.css";
 
 const Image = () => {
 	return (
-		<section className={classes.imgArea}>
+		<div className={classes.imgArea}>
 			<img src={heroMobileImg} alt="hero" className={classes.heroMimg} />
 			<img src={heroDesktopImg} alt="hero" className={classes.heroDimg} />
-		</section>
+		</div>
 	);
 };
 

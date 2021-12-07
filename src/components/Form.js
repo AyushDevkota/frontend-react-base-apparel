@@ -7,6 +7,7 @@ const Form = () => {
 	const [email, setEmail] = useState("");
 	const [error, setError] = useState(false);
 	const errorClass = error ? classes.error : "";
+	const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 	const emailChangeHandler = (e) => {
 		setEmail(e.target.value);
@@ -14,18 +15,18 @@ const Form = () => {
 
 	const formHandler = (e) => {
 		e.preventDefault();
-		if (email.length < 6 && !email.includes("@")) {
+		if (email.match(mailformat)) {
+			setError(false);
+		} else {
 			setError(true);
-			return;
 		}
-		setError(false);
 	};
 
 	return (
 		<>
 			<form onSubmit={formHandler}>
 				<input
-					type="email"
+					type="text"
 					name="email"
 					id="email"
 					placeholder="Email Address"
@@ -39,6 +40,7 @@ const Form = () => {
 						backgroundPosition: "center",
 						backgroundImage: `url(${iconArrow}), linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%))`,
 					}}
+					aria-label="submit"
 				>
 					{error && (
 						<img src={iconError} alt="error" className={classes.erroricon} />
