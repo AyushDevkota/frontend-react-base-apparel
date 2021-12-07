@@ -1,0 +1,32 @@
+.logo {
+	width: 85%;
+	margin: 0 auto;
+	padding: 1em 0;
+	grid-area: logoArea;
+}
+
+.logo img {
+	height: 1.75em;
+	width: 8em;
+}
+
+@media (min-width: 1024px) {
+	header {
+		background-image: linear-gradient(
+			135deg,
+			hsl(0, 0%, 100%),
+			hsl(0, 100%, 98%)
+		);
+	}
+
+	.logo {
+		width: 60%;
+		display: flex;
+		align-items: center;
+	}
+
+	.logo img {
+		height: 2em;
+		width: 8em;
+	}
+}

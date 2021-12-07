@@ -1,0 +1,16 @@
+.grid {
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-areas: "logoArea" "imageArea" "contentArea";
+}
+
+@media (min-width: 1024px) {
+	.grid {
+		height: 100vh;
+		grid-template-columns: 60% 40%;
+		grid-template-rows: 10% 90%;
+		grid-template-areas:
+			"logoArea imageArea"
+			"contentArea imageArea";
+	}
+}

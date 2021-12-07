@@ -1,0 +1,50 @@
+form {
+	position: relative;
+}
+
+input {
+	width: 100%;
+	height: 4em;
+	padding: 0.75em 1.5em;
+	border-radius: 50px;
+	border: 1px solid hsl(0, 36%, 70%);
+	background-color: transparent;
+}
+
+.error {
+	border: 2px solid hsl(0, 93%, 68%);
+}
+
+input::placeholder {
+	color: hsl(0, 36%, 70%);
+}
+
+.btn {
+	position: absolute;
+	top: 0;
+	right: 0px;
+	z-index: 2;
+	width: 7em;
+	height: 4em;
+	border-radius: 50px;
+	border: none;
+	cursor: pointer;
+}
+
+.errortext {
+	color: hsl(0, 93%, 68%);
+	font-size: 14px;
+	text-align: left;
+	padding: 0.75em 1.5em;
+}
+
+.erroricon {
+	position: absolute;
+	right: 8em;
+	top: 1.2em;
+	width: 2em;
+	height: 2em;
+}
+
+@media (min-width: 1024px) {
+}
